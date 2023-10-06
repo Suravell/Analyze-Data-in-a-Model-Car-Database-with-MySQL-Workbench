@@ -30,7 +30,8 @@ SELECT products.warehousecode, SUM(orderdetails.quantityordered)
 FROM products
 JOIN orderdetails ON products.productcode = orderdetails.productcode
 GROUP BY products.warehousecode;
- 
+![image](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/25871e7a-0720-45fd-8b86-421010292018)
+
 •	Total amount of productlines per warehousecode
 
 SELECT warehousecode, count(productline)
