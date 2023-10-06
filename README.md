@@ -29,7 +29,7 @@ MySQL Workbench, SQL queries, Mintclassics database file.
 ![1](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/82fc9ded-f195-4619-8c3b-bd51683d33f3)
 
 
-•	Total amount of productlines per warehousecode
+•	Total amount of [productlines]() per warehousecode
 
 SELECT warehousecode, count(productline)
 from products
