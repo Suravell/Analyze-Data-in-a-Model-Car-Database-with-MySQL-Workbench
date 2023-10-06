@@ -24,7 +24,7 @@ MySQL Workbench, SQL queries, Mintclassics database file.
 
 # Insights and Suggestions
 
-1.	Throughout the warehouses the warehouses code B has the [highest](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/blob/572c8108584fff8f65d3a9bcff948aae7f2f8600/Perwarehouseordered.sql) order (35,582) and D has the lowest order (22,351)
+1.	Throughout the warehouses the warehouses code B has the [highest](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/blob/755fc1c7f3d5abbef1cef8084e4ba851a052d460/Perwarehouseordered.sql) order (35,582) and D has the lowest order (22,351)
 
 ![1](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/82fc9ded-f195-4619-8c3b-bd51683d33f3)
 
