@@ -39,7 +39,7 @@ group by warehousecode;
                              
 
  
-2.	From the period of 2003 - 2005 how many products has been Shipped, cancelled, disputed, on hold, resolved, in process? From the result below 303 products has been shipped.
+2.	From the period of 2003 - 2005 how many products has been [Shipped](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/blob/0b47c42ecee00f3ee9d5272018d5d6627459dbe9/Order_Status.sql), cancelled, disputed, on hold, resolved, in process? From the result below 303 products has been shipped.
 
 SELECT status, COUNT(status) AS total_of_shipped
 FROM orders
