@@ -32,11 +32,18 @@ JOIN orderdetails ON products.productcode = orderdetails.productcode
 GROUP BY products.warehousecode;
 
 
+![1](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/82fc9ded-f195-4619-8c3b-bd51683d33f3)
+
+
 •	Total amount of productlines per warehousecode
 
 SELECT warehousecode, count(productline)
 from products
 group by warehousecode;
+
+   ![2](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/7fde3f03-4a31-433e-8954-2c86e70a829f)
+                             
+
  
 2.	From the period of 2003 - 2005 how many products has been Shipped, cancelled, disputed, on hold, resolved, in process? From the result below 303 products has been shipped.
 
@@ -49,12 +56,17 @@ OR status = "on hold"
 OR status = "resolved"
 OR status = "in process"
 group by status;
+
+![3](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/b10b1a6a-617a-4c40-a7c0-00f07867892f)
+
  
 •	As we can see above there are 6 client that cancelled their orders, with one lack of documentation in the warehouse.
 select orders.status, orders.comments, customers.country
 FROM orders
 JOIN customers ON orders.customernumber = customers.customernumber
 WHERE orders.status = "cancelled";
+
+![4](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/4df7f3ea-cd44-4c77-94d1-75b8a5fc98c1)
  
 3.	Total amount of quantity ordered from 2003-01-06 to 2005-05-31.
    
@@ -63,6 +75,11 @@ FROM orders
 JOIN orderdetails 
 ON orders.orderNumber = orderdetails.orderNumber
 group by orderdate;
+
+![5](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/18e79e2a-6186-4849-b79d-3b41eccb1a74)
+
+![6](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/bd6f8284-3228-43ec-aee0-51f954aa9045)
+
    
 •	About 36,439 orders has been recorded in 2003 and after two years in 2005 the number of orders has been decline almost by half.
 
@@ -70,6 +87,10 @@ SELECT YEAR(orders.orderDate) AS Year, SUM(orderdetails.quantityOrdered) AS Tota
 FROM orders 
 JOIN orderdetails ON orders.orderNumber= orderdetails.orderNumber 
 GROUP BY YEAR(orders.orderDate);
+
+![7](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/b5f26fe3-6ab3-476e-8468-1ce9a802d4dc)
+
+
  
 4.	USA got the highest number of orders followed by France and Spain. Switzerland, Hong Kong and Ireland got the lowest number of orders.
 
@@ -78,6 +99,9 @@ FROM orders
 JOIN  customers ON orders.customernumber = customers.customernumber
 group by country
 order by count desc;
+
+![8](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/cf5b2c67-ba09-4021-afae-0ae11440d5fa)
+
  
 6.	Types of product line in each warehouses.
    
@@ -93,6 +117,14 @@ WHERE warehousecode = "B";
               SELECT warehousecode, productline
               from products
               WHERE warehousecode = "d";
+
+![9](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/73200cf8-f25b-49cd-975a-8d463baac048)
+
+![10](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/07a120ef-fc15-406a-84bc-2d0341eae044)
+
+![11](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/d2a2eeac-c488-432d-9ca5-864ff5c86519)
+
+![12](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/48cd97ee-76ea-445c-bf92-a9defb0ec54e)
        
 7.	The productLine (Classic Cars) got the highest number of sales(1010) and ProductLine(Trains) got the lowest number of sales(81).
 
@@ -102,10 +134,14 @@ join orderdetails
 on products.productCode = orderdetails.productCode
 group by products.productLine
 order by no_of_sales desc;
+
+![13](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/ee49c427-dfee-4629-9aca-6325e234b3d2)
+
  
 8.	Price has major impact on the quantity ordered. As we can see from the data there is high quantity ordered when the price is cheap and small quantity ordered when the price is expensive.
 
 SELECT quantityordered, priceEach from orderdetails;
+![14](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/3380fcbc-3c07-4c2b-8b58-600f3e67716c)
  
 8.	We have found one item in storage that is not moving with a product name (1985 Toyota Supra) and with further investigation the reason behind might be an error with the data entry.
 
@@ -113,7 +149,8 @@ SELECT productname, COUNT(*)
 FROM Products 
 WHERE  Productcode NOT IN (SELECT Productcode FROM OrderDetails WHERE QuantityOrdered > 0)
 GROUP BY productname;
- 
+ ![15](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/540e2dc4-655d-41c7-aa22-e93a57d58dfb)
+
 # Summary
 The goal is to perform exploratory data analysis on Mint Classics Company’s Database to create inventory-related business decisions that lead to the closure of a storage facility by using SQL statements. 
 
