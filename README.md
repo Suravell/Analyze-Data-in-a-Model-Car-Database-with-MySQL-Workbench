@@ -24,13 +24,7 @@ MySQL Workbench, SQL queries, Mintclassics database file.
 
 # Insights and Suggestions
 
-1.	Throughout the warehouses the warehouses code B has the highest order (35,582) and D has the lowest order (22,351)
-
-SELECT products.warehousecode, SUM(orderdetails.quantityordered)
-FROM products
-JOIN orderdetails ON products.productcode = orderdetails.productcode
-GROUP BY products.warehousecode;
-[this link](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/blob/76ad0daccfe0551c6a3c1d9edce8658edafa1914/EER%20(Extended%20Entity-Relationship).png)
+1.	Throughout the warehouses the warehouses code B has the [highest]() order (35,582) and D has the lowest order (22,351)
 
 ![1](https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/assets/93171067/82fc9ded-f195-4619-8c3b-bd51683d33f3)
 
