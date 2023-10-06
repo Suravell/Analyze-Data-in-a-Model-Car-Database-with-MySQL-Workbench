@@ -1,7 +1,7 @@
 # Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench
 
 # The Project Scenario
-
+[sura][https://github.com/Suravell/Analyze-Data-in-a-Model-Car-Database-with-MySQL-Workbench/blob/76ad0daccfe0551c6a3c1d9edce8658edafa1914/EER%20(Extended%20Entity-Relationship).png]
 Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers.
 
 # Questions
