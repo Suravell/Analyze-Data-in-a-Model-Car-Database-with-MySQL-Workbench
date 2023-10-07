@@ -1,3 +1,4 @@
+--Total amount of quantity ordered with dates.
 SELECT orders.orderdate, sum(orderdetails.quantityOrdered)
 FROM orders
 JOIN orderdetails 
