@@ -14,9 +14,13 @@ Mint Classics Company, a retailer of classic model cars and other vehicles, is l
 
 # Skills demonstrated
 •	By using MySQL Workbench we import data from an existing database.
+
 •	Familiarize our self with the EER (Extended Entity-Relationship) diagram that models the structure of the Mint Classics database
+
 •	Start analyzing the data by using SQL statements such as SELECT, WHERE, ORDER BY, GROUP BY, JOIN and executing these statements against our database.
+
 •	Determine important factors that may influence inventory reorganization/reduction.
+
 •	Provide analytic insights and data-driven recommendations.
 
 # Tools used
